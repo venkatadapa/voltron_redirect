@@ -1,0 +1,6 @@
+services:
+  voltron_redirect.event_subscriber:
+    class: Drupal\voltron_redirect\EventSubscriber\VoltronRedirects
+    tags:
+      - {name: event_subscriber}
+    arguments: ['@logger.factory','@entity.query']
