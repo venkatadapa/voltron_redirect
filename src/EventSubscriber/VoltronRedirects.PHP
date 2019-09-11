@@ -34,16 +34,6 @@ class VoltronRedirects implements EventSubscriberInterface {
   }
 
   /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('logger.factory'),
-      $container->get('entity.query')
-    );
-  }
-
-  /**
    * Handles the redirection based on old page id.
    *
    * @param \Symfony\Component\HttpKernel\Event\GetResponseEvent $event
